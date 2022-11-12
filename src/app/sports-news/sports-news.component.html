@@ -1,0 +1,17 @@
+<div class="container-fluid mt-5">
+
+    <h4>Sports Headlines</h4>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let data of spotsNewsDisplay">
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAh8YVQhMCGhp1xDo9Pew7q0W4H1zLD-9wbA&usqp=CAU"
+                    width="100%" *ngIf="!data.urlToImage" alt="">
+                <img src="{{data.urlToImage}}" *ngIf="data.urlToImage" width="100%" alt="" srcset="">
+                <h5 class="mt-2 mb-2"> {{data.title}} </h5>
+                <a href="{{data.url}}" target="_blank" class="btn btn-dark btn-sm mt-2">Read More</a>
+            </div>
+
+        </div>
+    </div>
+</div>
